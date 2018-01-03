@@ -2,6 +2,8 @@ var express = require('express'),
     app = express(),
     port = process.env.PORT || 3000;
 
+app.use(express.json());       // to support JSON-encoded bodies
+
 var routes = require('./api/routes/datacampEmailRoutes');
 routes(app);
 
