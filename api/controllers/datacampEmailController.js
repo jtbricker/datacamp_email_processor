@@ -1,6 +1,7 @@
 'use strict';
 
 exports.processEmail = function(req, res) {
-    console.log(req.body);
+    html = $.parseHTML(req.body.body);
+    console.log(html);
     res.json({ message: 'Message Received' });    
 };
