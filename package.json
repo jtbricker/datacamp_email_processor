@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/jtbricker/datacamp_email_processor#readme",
   "dependencies": {
-    "express": "^4.16.2",
-    "jquery": "^3.2.1"
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2"
   }
 }
