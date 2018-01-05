@@ -3,7 +3,9 @@
 exports.processEmail = function(req, res) {
     const cheerio = require('cheerio');
     const $ = cheerio.load(req.body.body);
-    const date = er
+    const date = req.body.date;
+    const subject = req.body.subject;
+
     var links = $('a');
     $(links).each(function(i, link){
         link_text = $(link).text();
@@ -12,5 +14,8 @@ exports.processEmail = function(req, res) {
             console.log( link_text + ':\n  ' + link_url);
         }
       });
+    
+    console.log(date);
+    console.log(subject);
     res.json({ message: 'Message Received' });    
 };
