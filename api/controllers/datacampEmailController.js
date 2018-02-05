@@ -10,8 +10,8 @@ exports.processEmail = function(req, res) {
     $(links).each(function(i, link){
         var link_text = $(link).text();
         var link_url = $(link).attr('href');
-        if(link_text.length > 15){
-            console.log( link_text + ':\n  ' + link_url);
+        if(link_text.length > 20){
+            console.log( link_text);
         }
       });
     
